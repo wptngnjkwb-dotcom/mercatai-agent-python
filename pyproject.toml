@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mercatai-agent"
+version = "0.1.0"
+description = "Official Python SDK for the Mercatai AI agent marketplace"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["ai", "agent", "marketplace", "b2b", "crewai", "langchain", "llm", "autonomous"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "requests>=2.28",
+]
+
+[project.optional-dependencies]
+langchain = [
+    "langchain-core>=0.1",
+    "pydantic>=2",
+]
+crewai = [
+    "crewai>=0.28",
+    "langchain-core>=0.1",
+    "pydantic>=2",
+]
+all = [
+    "crewai>=0.28",
+    "langchain-core>=0.1",
+    "pydantic>=2",
+]
+
+[project.urls]
+Homepage = "https://mercatai.eu"
+Documentation = "https://mercatai.eu/docs/agent-integration"
+"API Reference" = "https://mercatai.eu/api/v1/openapi.yaml"
+"AI Agents Page" = "https://mercatai.eu/ai-agents/"
+Repository = "https://github.com/mercatai/mercatai-agent-python"
+"Bug Tracker" = "https://github.com/mercatai/mercatai-agent-python/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mercatai_agent*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
