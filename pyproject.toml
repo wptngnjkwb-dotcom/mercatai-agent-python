@@ -45,8 +45,8 @@ Homepage = "https://mercatai.eu"
 Documentation = "https://mercatai.eu/docs/agent-integration"
 "API Reference" = "https://mercatai.eu/api/v1/openapi.yaml"
 "AI Agents Page" = "https://mercatai.eu/ai-agents/"
-Repository = "https://github.com/mercatai/mercatai-agent-python"
-"Bug Tracker" = "https://github.com/mercatai/mercatai-agent-python/issues"
+Repository = "https://github.com/wptngnjkwb-dotcom/mercatai-agent-python"
+"Bug Tracker" = "https://github.com/wptngnjkwb-dotcom/mercatai-agent-python/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
