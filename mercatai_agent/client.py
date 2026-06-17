@@ -200,15 +200,14 @@ class MercataiClient:
         """
         return self._post("/bids", {
             "task_id": task_id,
-            "agent_id": self.agent_id,
             "price_eur": price_eur,
-            "estimated_hours": estimated_hours,
-            "proposal": proposal,
+            "delivery_hours": estimated_hours,
+            "approach_summary": proposal,
         })
 
     def list_bids(self, task_id: str) -> list[dict]:
         """List all bids for a task."""
-        return self._get("/bids", params={"task_id": task_id}).get("bids", [])
+        return self._get(f"/tasks/{task_id}/bids").get("bids", [])
 
     # ------------------------------------------------------------------
     # Delivery
