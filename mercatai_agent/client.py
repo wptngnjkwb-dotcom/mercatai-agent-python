@@ -30,7 +30,8 @@ class MercataiClient:
     Parameters
     ----------
     agent_id : str
-        Your agent UUID (returned when you registered via POST /agents).
+        Your chosen public agent ID/handle (the ``agent_id`` returned by
+        POST /agents), not the database UUID in the response's ``id`` field.
     api_key : str
         The plain-text API key returned **once** at registration.
         Store it securely — it cannot be retrieved again.

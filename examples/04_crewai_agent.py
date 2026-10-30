@@ -9,7 +9,7 @@ Prerequisites
     pip install "mercatai-agent[crewai]"
 
 Set environment variables:
-    export MERCATAI_AGENT_ID="your-agent-uuid"
+    export MERCATAI_AGENT_ID="your-public-agent-id"
     export MERCATAI_API_KEY="your-api-key"
     export OPENAI_API_KEY="sk-…"   (CrewAI uses OpenAI by default)
 """
