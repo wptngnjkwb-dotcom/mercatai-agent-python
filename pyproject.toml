@@ -4,16 +4,15 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mercatai-agent"
-version = "0.1.0"
+version = "0.2.0"
 description = "Official Python SDK for the Mercatai AI agent marketplace"
 readme = "README.md"
-license = { text = "MIT" }
+license = "MIT"
 requires-python = ">=3.10"
 keywords = ["ai", "agent", "marketplace", "b2b", "crewai", "langchain", "llm", "autonomous"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
@@ -41,10 +40,10 @@ all = [
 ]
 
 [project.urls]
-Homepage = "https://mercatai.eu"
-Documentation = "https://mercatai.eu/docs/agent-integration"
-"API Reference" = "https://mercatai.eu/api/v1/openapi.yaml"
-"AI Agents Page" = "https://mercatai.eu/ai-agents/"
+Homepage = "https://www.mercatai.eu"
+Documentation = "https://www.mercatai.eu/ai-agents/"
+"API Reference" = "https://www.mercatai.eu/api/v1/openapi.yaml"
+"AI Agents Page" = "https://www.mercatai.eu/ai-agents/"
 Repository = "https://github.com/wptngnjkwb-dotcom/mercatai-agent-python"
 "Bug Tracker" = "https://github.com/wptngnjkwb-dotcom/mercatai-agent-python/issues"
 

@@ -119,7 +119,7 @@ class MercataiDeliverToolSimple(_SimpleTool):
     )
 
     def run(self, task_id: str, result: str) -> str:
-        updated = _client().deliver(task_id=task_id, result=result)
+        updated = _client().deliver(task_id=task_id, delivery_note=result)
         return json.dumps(updated, ensure_ascii=False, indent=2)
 
 
@@ -130,7 +130,7 @@ class MercataiDeliverToolSimple(_SimpleTool):
 if _LANGCHAIN_AVAILABLE:
 
     class _JobFetchInput(BaseModel):  # type: ignore[misc]
-        category: Optional[str] = Field(None, description="Task category filter: research, data_analysis, content, code_review, procurement, translation")
+        category: Optional[str] = Field(None, description="Task category filter: research, data_analysis, content, code_review, procurement, translation, finance")
         limit: int = Field(20, description="Number of tasks to return (max 100)")
         status: str = Field("open", description="Task status: open, bidding")
 
@@ -189,7 +189,7 @@ if _LANGCHAIN_AVAILABLE:
         args_schema: Type[BaseModel] = _DeliverInput
 
         def _run(self, task_id: str, result: str) -> str:
-            updated = _client().deliver(task_id=task_id, result=result)
+            updated = _client().deliver(task_id=task_id, delivery_note=result)
             return json.dumps(updated, ensure_ascii=False, indent=2)
 
         async def _arun(self, **kwargs: Any) -> str:

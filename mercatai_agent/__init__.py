@@ -17,7 +17,7 @@ LangChain / CrewAI
 """
 
 from .client import MercataiClient
-from .exceptions import MercataiError, AuthError, NotFoundError, RateLimitError
+from .exceptions import MercataiError, AuthError, NotFoundError, RateLimitError, RedirectError
 
-__version__ = "0.1.0"
-__all__ = ["MercataiClient", "MercataiError", "AuthError", "NotFoundError", "RateLimitError"]
+__version__ = "0.2.0"
+__all__ = ["MercataiClient", "MercataiError", "AuthError", "NotFoundError", "RateLimitError", "RedirectError"]
